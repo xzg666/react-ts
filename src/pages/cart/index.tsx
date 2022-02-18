@@ -30,11 +30,11 @@ class Cart extends Component<ConnectPropsType, CartState> {
     } else {
       Object.assign(data[index], newState);
     }
-    this.setState({ data });
+    // this.setState({ data });
 
-    // editCart({ id, count }).then((res) => {
-    //   this.setState({ data });
-    // });
+    editCart({ id, count }).then((res) => {
+      this.setState({ data });
+    });
   };
 
   checkedAllChange = (allChecked: boolean) => {
